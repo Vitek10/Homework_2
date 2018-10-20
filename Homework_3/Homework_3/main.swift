@@ -1,13 +1,14 @@
 //
 //  main.swift
 import Foundation
-
+print("-------------------------Task_1------------------------")
 //Task_1
 // Создание «Hello, World!» программы.
 
 print("Hello, World!")
 
 //Task_2
+print("-------------------------Task_2------------------------")
 /*
 1. Целое десятичное число 12 с минимально необходимой разрядной сеткой.
 2. Целое десятичное число -100 с минимально необходимой разрядной сеткой.
@@ -32,6 +33,7 @@ let bool: Bool = true
 let tuple: (Int,String) = (12, "twelve")
 
 //  Task_3
+print("-------------------------Task_3------------------------")
 /*
 1. Определить и вывести на экран длину строки.
 2. Заменить каждое вхождение символа "i" на знак "u".
@@ -54,51 +56,42 @@ is"
 var str = "Hello World. This is Swift programming language"
 let longStr = str.count
 print(longStr)
-
 var changeChar = str.replacingOccurrences(of: "i", with: "u")
 print(changeChar)
-
 var delCharfour = changeChar.remove(at: changeChar.index(changeChar.startIndex, offsetBy: 3))
 print(delCharfour)
 delCharfour =  changeChar.remove(at: changeChar.index(changeChar.startIndex, offsetBy: 6))
 print(delCharfour)
 delCharfour = changeChar.remove(at: changeChar.index(changeChar.startIndex, offsetBy: 9))
 print(delCharfour)
-
 changeChar.append("(modified)")
 print(changeChar)
-
 if str.isEmpty == false{
     print("Is not empty")
 }
-
 str.append(".")
 print(str)
 
 if str.hasPrefix("Hello"){
     print("Prefix exists")
 }
-
 if str.hasSuffix("World"){
      print("Suffix exists")
 }else{
      print("No")
 }
-
 changeChar.insert("-", at: changeChar.index(changeChar.startIndex, offsetBy: 9))
 print(changeChar)
-
 let replaceWord = changeChar.replacingOccurrences(of: "Thus us", with: "It is")
 print(replaceWord)
-
 let startIndex = replaceWord.index(replaceWord.startIndex, offsetBy: 9)
 print(replaceWord[startIndex])
 let endIndex = replaceWord.index(startIndex, offsetBy: 5)
 print(replaceWord[endIndex])
-
 print(replaceWord[startIndex..<endIndex])
 
 //Task_4
+print("-------------------------Task_4------------------------")
 /*
  1. Опишите сущность, которая содержит или не содержит целое десятичное число integerNumber, но не задает значение по умолчанию.
  2. Опишите сущность, которая содержит или не содержит число с плавающей точкой decimalNumber, но не задает значение по умолчанию.
@@ -120,5 +113,15 @@ integetNumber! -= 15
 let unaryMinus = -integetNumber!
 print(unaryMinus)
 decimalNumber = Double(integetNumber!)
-let pairOrValues = (integetNumber, decimalNumber)
+var tuples = (integetNumber, decimalNumber)
+var pairOrValues = tuples
+pairOrValues.0 = 779
+print(pairOrValues)
+pairOrValues.1 = 86.75
+print(pairOrValues)
+if let decimalOpt = decimalNumber {
+    print("\(decimalOpt)")
+}
+
+
 
