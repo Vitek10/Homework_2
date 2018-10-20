@@ -99,8 +99,8 @@ let inter = aSet.intersection(bSet)
 let aSub = aSet.subtracting(bSet)
 let bSub = bSet.subtracting(aSet)
 let union = aSet.union(bSet)
-var xSet = Set<Int>(arrayLiteral: 2,3,4)
-var ySet = Set<Int>(arrayLiteral: 1,2,3,4,5,6)
+var xSet = Set(2...4)
+var ySet = Set(1...6)
 var zSet = Set<Int>(arrayLiteral: 3, 4, 2)
 var x1Set = Set<Int>(arrayLiteral: 5, 6, 7)
 let subset_x_y = xSet.isSubset(of: ySet)
@@ -140,4 +140,8 @@ print("-------------------------Task_3------------------------")
  12.Выведите на экран количество элементов словаря mNDict, а
  также количество его всех ключей и их всех значений.
  13. Выведите на экран строчное представление словаря mNDict.*/
+
+var nDict: [Int : String] = [1 : "One", 2 : "Two", 3 : "Three", 4 : "Four",5 : "Five"]
+print(nDict[3]!)
+print(nDict.index(forKey: 4)!)
  
