@@ -141,7 +141,30 @@ print("-------------------------Task_3------------------------")
  также количество его всех ключей и их всех значений.
  13. Выведите на экран строчное представление словаря mNDict.*/
 
-var nDict: [Int : String] = [1 : "One", 2 : "Two", 3 : "Three", 4 : "Four",5 : "Five"]
+let nDict: [Int : String] = [1 : "One", 2 : "Two", 3 : "Three", 4 : "Four",5 : "Five"]
 print(nDict[3]!)
 print(nDict.index(forKey: 4)!)
+var mNDict = nDict
+mNDict[6] = "Six"; mNDict[7] = "Seven"
+mNDict.updateValue("Six", forKey: 6)
+mNDict.updateValue("Seven", forKey: 7)
+mNDict.updateValue("Eight", forKey: 8)
+mNDict.removeValue(forKey: 5)
+let indexofFour = mNDict.index(forKey: 4)
+if let index = indexofFour{
+    _ = mNDict.remove(at: index)
+}; print(mNDict)
+let indexofOne = mNDict.index(forKey: 1)
+let indexofSeven = mNDict.index(forKey: 7)
+print(mNDict.distance(from: indexofOne!, to: indexofSeven!))
+var mNDictKeys = mNDict.keys
+print(mNDictKeys)
+var mNDictValues = mNDict.values
+print(mNDictValues)
+print(mNDict.count)
+print(mNDict.keys.count)
+print(mNDict.values.count)
+print(mNDict.sorted(by: <))
+
+
  
