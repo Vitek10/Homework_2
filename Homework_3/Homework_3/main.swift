@@ -113,14 +113,15 @@ integetNumber! -= 15
 let unaryMinus = -integetNumber!
 print(unaryMinus)
 decimalNumber = Double(integetNumber!)
-var tuples = (integetNumber, decimalNumber)
-var pairOrValues = tuples
-pairOrValues.0 = 779
-print(pairOrValues)
-pairOrValues.1 = 86.75
-print(pairOrValues)
-if let decimalOpt = decimalNumber {
-    print("\(decimalOpt)")
+var pairOrValues: (int: Int?, dec: Double?)? = (integetNumber, decimalNumber)
+if pairOrValues!.int != nil {
+    print(pairOrValues!.int!)
+}
+if pairOrValues!.dec != nil {
+    print(pairOrValues!.dec!)
+}
+if let value = pairOrValues?.dec {
+    print(value)
 }
 
 
